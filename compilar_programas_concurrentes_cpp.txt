@@ -1,0 +1,9 @@
+Para compilar programas concurrentes en c++ debemos usar la siguiente orden:
+$ g++ --std=c++11 programa.cpp -o prog_exe -pthread
+
+Esto tomando en cuenta que al principio de nuestro archivo .cpp añadimos la cabecera de hilos:
+#include <thread>
+
+o bien
+
+#include <pthread.h>
