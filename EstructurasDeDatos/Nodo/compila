@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c Pila.cpp

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c src/Nodo.cpp
+g++ -W -Wall -c src/ListaLigada.cpp
+
+#Compilar el main
+g++ -W -Wall -o listaLig_Exec main.cpp *.o
+
+#borrar los .o
+rm *.o

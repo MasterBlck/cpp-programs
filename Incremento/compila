@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c Incremento.cpp
+
+#Compilar el main
+g++ -W -Wall -o prog_exe main.cpp *.o
+
+#borrar los .o
+rm *.o

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c RelojMilitar.cpp
+g++ -W -Wall -c RelojEstandar.cpp
+
+#Compilar el main
+g++ -W -Wall -o prog_exe main.cpp *.o
+
+#borrar los .o
+rm *.o

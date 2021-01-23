@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c Figura.cpp
+g++ -W -Wall -c Punto.cpp
+g++ -W -Wall -c Circulo.cpp -std=c++11
+g++ -W -Wall -c Cilindro.cpp -std=c++11
+
+#Compilar el main
+g++ -W -Wall -o prog_exe main.cpp *.o -std=c++11
+
+#borrar los .o
+rm *.o
