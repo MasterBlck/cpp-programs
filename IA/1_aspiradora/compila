@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#compilar los archivos de implementación .cpp
+g++ -W -Wall -c -std=c++11 Aspiradora.cpp
+g++ -W -Wall -c -std=c++11 Escenario.cpp
+
+#Compilar el main
+g++ -W -Wall -std=c++11 -o prog_exe main.cpp *.o
+
+#borrar los .o
+rm *.o
