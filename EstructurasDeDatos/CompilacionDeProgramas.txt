@@ -1,0 +1,17 @@
+COMPILACION DE PROGRAMAS C++
+
+Suponiendo que existen 3 archivos:
+a.h // archivo de cabecera
+a.c // archivo de implementacion de cabecera
+main.c
+
+1) Si compilamos únicamente a.c, el archivo que no contiene la función main, es necesario indicarle al compilador (opción –c en gcc) sino no sabrá cómo crear un ejecutable, ya que no hay punto de partida. Es por ello que el archivo conteniendo la función main (sin opción –c) y los otros archivos fuente se compilan de manera diferente. En este caso:
+
+gcc -W -Wall -c a.c
+gcc -W -Wall -o plop.exe main.c a.o
+
+
+
+Las opciones –W y –Wall permiten mostrar más mensajes de warning. 
+-El primer comando construye a.o a partir de a.c.
+-El segundo genera el binario asociado a main.c, lo une con a.o, y produce así un ejecutable (plop.exe) 
