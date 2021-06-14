@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#compilar las implementaciones
+g++ -W -Wall -c impl/Vector.cpp
+mv Vector.o objs
+sleep 1
+g++ -W -Wall -o ejecutables/progVector principal/MainVector.cpp objs/Vector.o
+./ejecutables/progVector
