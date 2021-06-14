@@ -1,0 +1,40 @@
+#include <iostream>
+#include "../headers/ListaLigada.h"
+#include "../headers/Nodo.h"
+
+using std::cout;
+using std::endl;
+
+ListaLigada::ListaLigada()
+{
+	iniLista = NULL;
+}
+
+void ListaLigada::insertarAlInicio(int dat)
+{
+	Nodo *nuevo = new Nodo(dat);
+
+	nuevo->liga = iniLista;
+	iniLista = nuevo;
+
+}
+
+void ListaLigada::insertarAlFinal()
+{
+
+}
+
+void ListaLigada::imprimir()
+{
+	Nodo *aux = iniLista;
+
+	while(aux != NULL){
+		cout << aux->dato << "->";
+		aux = aux->liga;
+	}
+}
+
+ListaLigada::~ListaLigada()
+{
+	//destructor de lista ligada
+}

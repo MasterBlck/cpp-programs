@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#compilar las implementaciones
+g++ -W -Wall -c impl/Nodo.cpp
+g++ -W -Wall -c impl/ListaLigada.cpp
+
+#mover los archivos.o a su respectiva carpeta
+mv *.o objs
+
+#compilar el main
+g++ -W -Wall -o ejecutables/progLista2 principal/testlista.cpp objs/*.o
