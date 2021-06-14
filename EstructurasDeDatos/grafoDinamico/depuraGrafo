@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#compilar las implementaciones
+g++ -W -Wall -g -c src/Nodo.cpp
+g++ -W -Wall -g -c src/Grafo.cpp
+
+#mover los archivos.o a su respectiva carpeta
+mv *.o objs
+
+#compilar el main en modo de depuracion
+#g++ -o exe/debugProgLista main/testgrafo.cpp -std=c99 -Wall -DTEST --debug
+g++ -g -o exe/debugProgLista main/testgrafo.cpp objs/*.o
+
+#mover los archivos.o a su respectiva carpeta
+#mv *.o objs

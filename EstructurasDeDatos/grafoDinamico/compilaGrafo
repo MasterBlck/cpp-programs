@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#compilar las implementaciones
+g++ -W -Wall -c src/Nodo.cpp
+g++ -W -Wall -c src/Grafo.cpp
+
+#mover los archivos.o a su respectiva carpeta
+mv *.o objs/
+
+#compilar el main
+g++ -W -Wall -o exe/proggrafo main/testgrafo.cpp objs/*.o
